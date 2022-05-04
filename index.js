@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     $(this).attr("disabled", "disabled");
 
-    $.ajax("http://localhost:3000" + "/posts/" + postId, { method: "GET" })
+    $.ajax("https://scalio-willian-correa-test.herokuapp.com" + "/posts/" + postId, { method: "GET" })
       .done(function (data) {
         if (!data.title || !data.body) {
           $(".feedback").html("Post lacking either a title or body.");
